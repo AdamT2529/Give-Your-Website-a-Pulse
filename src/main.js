@@ -13,3 +13,11 @@ then ( response => response.json()).then (data => {
     <img src="${data.url}"/>
     <p>${data.explanation}</p>`;
 })
+
+let media;
+
+if(data.media_type === "image") {
+    media = `<img src="${data.url}"/>`;
+} else {
+    media = `<video src="${data.url}" controls></video>`;
+}
