@@ -5,3 +5,15 @@ body {
     position: relative;
 
 }
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 80px
+    height: 100%;
+    background: #00FFFF
+    z-index: -1
+
+}
