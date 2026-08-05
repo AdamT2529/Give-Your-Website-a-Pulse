@@ -8,11 +8,6 @@ document.querySelector("#app").innerHTML = "<p>loading...</p>";
 
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`).
 then ( response => response.json()).then (data => {
-    document.querySelector("#app").innerHTML= `
-    <h1>${data.title}</h1> 
-    <img src="${data.url}"/>
-    <p>${data.explanation}</p>`;
-})
 
 let media;
 
@@ -27,8 +22,7 @@ document.querySelector("#app").innerHTML = `
     ${media}
     <p>${data.explanation}</p>
     `;
-
-
+    })
 .catch(err => {
     document.querySelector("#app").innerHTML = `<p>Error: ${err.message}</p>`;
 });
