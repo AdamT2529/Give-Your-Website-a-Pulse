@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
 const date = document.querySelector("#datepicker").value;
@@ -18,9 +21,9 @@ if(data.media_type === "image") {
 }
 
 document.querySelector("#app").innerHTML = `
-    <h1>${data.title}</h1>
+    <h1 data-aos="fade-up">${data.title}</h1>
     ${media}
-    <p>${data.explanation}</p>
+    <p data-aos="fade-right">${data.explanation}</p>
     `;
     })
 .catch(err => {

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Black+Ops+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
     <meta charset="UTF-8" />
@@ -16,9 +17,11 @@
   var theTime = new Date().toLocaleString();
   var timeText = document.querySelector("#timeElement");
   timeText.innerHTML = theTime
+  AOS.init();
 </script>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>
 </html>
