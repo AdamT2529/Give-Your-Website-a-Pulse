@@ -6,7 +6,20 @@ body {
 
 }
 
-body::before,
+body::before {
+    left: 0;
+    clip-path: polygon(
+  0 0,       /* top left corner */
+  100% 0,    /* top right corner */
+  85% 2.5%,  /* first zigzag inward */
+  100% 5%,   /* back out */
+  85% 7.5%,  /* inward again */
+  100% 10%,  /* back out */
+  /* ...repeating all the way down... */
+  0 100%     /* bottom left corner */
+);
+
+}
 body::after {
     content: '';
     position: fixed;
@@ -15,6 +28,17 @@ body::after {
     height: 100%;
     background: #00FFFF;
     z-index: -1;
+    clip-path: polygon(
+  0 0,       /* top left corner */
+  100% 0,    /* top right corner */
+  85% 2.5%,  /* first zigzag inward */
+  100% 5%,   /* back out */
+  85% 7.5%,  /* inward again */
+  100% 10%,  /* back out */
+  /* ...repeating all the way down... */
+  0 100%     /* bottom left corner */
+);
+
 }
 
 h1 {
