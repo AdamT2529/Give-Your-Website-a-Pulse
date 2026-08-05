@@ -16,3 +16,18 @@ body::after {
     background: #00FFFF;
     z-index: -1;
 }
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+p {
+  font-family: 'Black Ops One', sans-serif;
+}
+
+@media (max-width: 600px) {
+  body::before,
+  body::after {
+    display: none;
+  }
+}
